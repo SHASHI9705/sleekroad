@@ -61,7 +61,11 @@ export default function SignInPage({ onBack }: { onBack?: () => void }) {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-[20000ms] hover:scale-110"
         style={{ 
+<<<<<<< HEAD
           backgroundImage: "url('/catt1.png')",
+=======
+          backgroundImage: "url('/catt1.jpeg')",
+>>>>>>> 0963799d954542e4d1676d555460784d0c78ee6a
         }} 
       >
         <div className="absolute inset-0 bg-black/80 backdrop-blur-[4px]" />

@@ -89,15 +89,15 @@ export default function SignInPage({ onBack }: { onBack?: () => void }) {
         <Card className="border border-white/30 bg-white/10 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] rounded-[3rem] overflow-hidden">
           <div className="p-10 pt-12 flex flex-col items-center">
             {/* SleekRoad Logo */}
-            <motion.img 
+            <motion.img
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              src="/newone.png" 
-              alt="SleekRoad" 
+              src="/newone.png"
+              alt="SleekRoad"
               className="w-25 h-24 mb-6 drop-shadow-2xl object-contain"
               onError={(e) => (e.currentTarget.style.display = 'none')}
             />
-            
+
             <h1 className="text-3xl font-black text-white tracking-tight mb-2">SleekRoad</h1>
             <p className="text-white/80 text-sm font-medium mb-10">Campus marketplace, simplified.</p>
 
@@ -140,9 +140,9 @@ export default function SignInPage({ onBack }: { onBack?: () => void }) {
           </div>
 
           <div className="bg-white/5 border-t border-white/10 py-6 text-center">
-             <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">
-                Secured Access
-             </span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">
+              Secured Access
+            </span>
           </div>
         </Card>
 

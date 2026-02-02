@@ -175,7 +175,7 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Company Links */}
+            
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-6">Company</h3>
               <ul className="space-y-4">
@@ -219,7 +219,7 @@ export function Footer() {
             </div>
 
           </div>
-          {/* Newsletter & Contact */}
+         
           <div className="space-y-6">
             {/* <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Stay Updated</h3>
@@ -254,7 +254,7 @@ export function Footer() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-gray-600">
                   <Mail className="w-4 h-4" />
-                  <span className="text-sm">hotdrop.tech@gmail.com</span>
+                  <span className="text-sm">sleekroadhelp@gmail.com</span>
                 </div>
               </div>
             </div>

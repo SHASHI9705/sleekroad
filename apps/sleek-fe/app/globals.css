@@ -509,6 +509,99 @@ body {
   );
   animation: shimmer 3s infinite;
 }
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes underlineGrow {
+  from { width: 0; }
+  to { width: 120px; }
+}
+
+@keyframes growWidth {
+  from { width: 0; }
+  to { width: 160px; }
+}
+
+@keyframes sweep {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes dotFade {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes breathing {
+  0%, 100% { 
+    transform: scale(1) translateY(0);
+    opacity: 0.9;
+  }
+  50% { 
+    transform: scale(1.03) translateY(-1px);
+    opacity: 1;
+  }
+}
+
+@keyframes scan {
+  0% { left: -2rem; }
+  100% { left: 100%; }
+}
 
 /* Smooth focus states */
 *:focus-visible {

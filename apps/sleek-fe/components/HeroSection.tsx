@@ -17,6 +17,7 @@ export function HeroSection({ onSearch, onCategorySelect }: { onSearch: (query: 
   const [isPaused, setIsPaused] = useState(false);
   const interactionTimeoutRef = useRef<number | null>(null);
   const [itemsToShow, setItemsToShow] = useState(5);
+  const lampStopAt = 7.6;
 
   // Carousel Logic
   const pauseAfterInteraction = () => {
@@ -205,10 +206,31 @@ export function HeroSection({ onSearch, onCategorySelect }: { onSearch: (query: 
   return (
     <div className="min-h-screen bg-[#F4F2F2] font-sans text-gray-700">
 
+
       {/* Hero Carousel Section */}
-      <div className="relative flex flex-col items-center justify-center mt-0 pb-10 md:pb-12 overflow-hidden min-h-[80vh]">
+      <div className="relative flex flex-col items-center justify-start md:justify-center mt-0 pb-10 md:pb-12 overflow-hidden min-h-[80vh] pt-2 md:pt-0">
         <div className="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-green-200/40 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 left-[-10%] h-64 w-64 rounded-full bg-green-100/60 blur-3xl" />
+        <div className="w-full mt-0 mb-2 md:mb-0">
+        {/* <div className="relative w-full h-[100px] md:h-[90px] overflow-hidden bg-[#F4F2F2]">
+          <video
+            className="w-full h-full object-contain"
+            src="/lamp.mp4"
+            autoPlay
+            muted
+            playsInline
+            preload="metadata"
+            onTimeUpdate={(e) => {
+              const video = e.currentTarget;
+              if (video.currentTime >= lampStopAt) {
+                video.currentTime = lampStopAt;
+                video.pause();
+              }
+            }}
+          />
+        </div> */}
+      </div>
+        
         {/* <div className="w-full max-w-6xl flex justify-between items-center px-6 md:px-12 mb-2 z-10">
           <span className="text-xs font-bold bg-green-100 text-green-800 px-3 py-1 rounded-full uppercase tracking-wider">New Drops Daily</span>
           <button 
@@ -224,6 +246,8 @@ export function HeroSection({ onSearch, onCategorySelect }: { onSearch: (query: 
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
+          <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 md:h-80 md:w-80 rounded-full bg-yellow-200/60 blur-3xl z-0" />
+          <div className="pointer-events-none absolute left-1/2 bottom-6 -translate-x-1/2 h-72 w-72 md:h-96 md:w-96 rounded-full bg-yellow-200/40 blur-3xl z-0" />
           <button
             onClick={handlePrev}
             className="flex absolute left-4 lg:left-24 z-30 p-2 bg-white/90 backdrop-blur rounded-full shadow-md hover:shadow-lg hover:scale-105 text-gray-800 border border-gray-100 transition-all"
@@ -242,7 +266,7 @@ export function HeroSection({ onSearch, onCategorySelect }: { onSearch: (query: 
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          <div className="relative w-full max-w-5xl h-full flex items-center justify-center">
+          <div className="relative w-full max-w-5xl h-full flex items-center justify-center z-10">
             <AnimatePresence initial={false} mode='popLayout'>
               {loading ? (
                 /* simple placeholders while loading */
